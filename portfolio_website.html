@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaik Mulla Baba Fakruddin | EEE Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #0a1628;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            color: white;
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #64b5f6;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0a1628 0%, #1a2744 50%, #2a3f5f 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 20px 60px;
+            color: white;
+        }
+        
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 4em;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .hero-content p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #b0c4de;
+        }
+        
+        .hero-btn {
+            display: inline-block;
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .hero-btn:hover {
+            background: white;
+            color: #0a1628;
+            transform: translateY(-3px);
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image-box {
+            background: linear-gradient(135deg, #64b5f6 0%, #2196f3 100%);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            position: relative;
+        }
+        img{
+            height: 400px;
+            width: 480px;
+            position: relative;
+        }
+        .hero-image-box::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid #64b5f6;
+            border-radius: 20px;
+            z-index: -1;
+        }
+        
+        .hero-image-placeholder {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            height: 400px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+        }
+        /* Achievements Section */
+.achievements {
+    padding: 80px 20px;
+    background: white;
+}
+
+.achievements .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.achievements h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #0a1628;
+}
+
+.achievement-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.achievement-item li {
+    background: #f5f7fa;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-left: 5px solid #2196f3;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.6;
+    transition: transform 0.3s;
+}
+
+.achievement-item li:hover {
+    transform: translateX(8px);
+    background: #eaf3fc;
+}
+
+        
+        /* Services Section */
+        .services {
+            padding: 80px 20px;
+            background: #f5f7fa;
+        }
+        
+        .services .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .services h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #0a1628;
+        }
+        
+        .services-subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 50px;
+            max-width: 600px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #64b5f6 0%, #2196f3 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            margin-bottom: 25px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #0a1628;
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* Projects Section */
+        .projects {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .projects .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .projects h2 {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #0a1628;
+        }
+        
+        .project-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #2196f3;
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateX(10px);
+        }
+        
+        .project-card h3 {
+            color: #0a1628;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .project-card p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .project-card ul {
+            margin-left: 20px;
+            color: #666;
+        }
+        
+        .project-card li {
+            margin-bottom: 10px;
+        }
+        
+        /* Skills Section */
+        .skills {
+            padding: 80px 20px;
+            background: #0a1628;
+            color: white;
+        }
+        
+        .skills .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .skills h2 {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-category {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .skill-category h3 {
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            color: #64b5f6;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .skill-category li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Education Section */
+        .education {
+            padding: 80px 20px;
+            background: #f5f7fa;
+        }
+        
+        .education .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .education h2 {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #0a1628;
+        }
+        
+        .education-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border-left: 5px solid #2196f3;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .education-item h3 {
+            color: #0a1628;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        
+        .education-item .institution {
+            color: #666;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .education-item .grade {
+            color: #2196f3;
+            font-weight: 700;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #0a1628;
+            color: white;
+            padding: 60px 20px 30px;
+        }
+        
+        .footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            color: #64b5f6;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .footer-section p {
+            color: #b0c4de;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            list-style: none;
+        }
+        
+        .contact-info li {
+            margin-bottom: 15px;
+            color: #b0c4de;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-info a {
+            color: #64b5f6;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-info a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: #64b5f6;
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            text-align: center;
+            color: #b0c4de;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .hero .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+            
+            .hero-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">SHAIK MULLA BABA FAKRUDDIN</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements </a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>BABA FAKRUDDIN</h1>
+                <h3 style="text-align: right;"><b>ELECTRICAL ENGINEERING</b></h3>
+                <p>Explore my portfolio showcasing Power Systems, Renewable Energy Projects, Academic Achievements, and Specialized Engineering Services.</p>
+                <a href="#projects" class="hero-btn">View Portfolio →</a>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-box">
+                    <div class="hero-image-placeholder"><img src="./5454.jpg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Engineering Services</h2>
+            <p class="services-subtitle">Offering advanced electrical and electronics engineering solutions across multiple domains.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Power Electronics</h3>
+                    <p>Expertise in DC-DC converters, EV charging systems, and power system design with focus on efficiency and reliability.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">☀️</div>
+                    <h3>Renewable Energy</h3>
+                    <p>Solar PV installation, microgrids, and sustainable energy solutions for modern electrical systems.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>System Integration</h3>
+                    <p>Electrical wiring, system assembly, troubleshooting, and maintenance with hands-on industrial experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="project-card">
+                <h3>Bidirectional DC–DC Converter for EV Charging</h3>
+                <p><strong>Academic Project</strong></p>
+                <ul>
+                    <li>Designed converter operating in buck mode (charging) and boost mode (discharging)</li>
+                    <li>Addresses growing EV adoption demands for efficient and flexible charging systems</li>
+                    <li>Ensures smooth mode transition, stable voltage regulation, and high efficiency</li>
+                    <li>Validated through comprehensive simulation results</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h3>Earthing System Installation</h3>
+                <p><strong>Feb 2023 – Apr 2023</strong></p>
+                <ul>
+                    <li>Designed and implemented pipe earthing system for electrical laboratory</li>
+                    <li>Conducted soil tests and analyzed soil resistance with detailed documentation</li>
+                    <li>Learned critical importance of earthing in equipment and personnel protection</li>
+                    <li>Led team presentation with successful seminar delivery</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+        <!-- Achievements Section -->
+    <section class="achievements" id="achievements">
+        <div class="container">
+            <h2>Achievements</h2>
+            <div class="achievement-item">
+                <ul>
+                    <li>🏆 Awarded <strong>Prathamic Hindi Certification</strong> (First Class) – Dakshin Bharat Hindi Prachar Sabha, 2015</li>
+                    <li>🏆 Awarded <strong>Rashtrabhasha Hindi Certification</strong> (First Class) – Dakshin Bharat Hindi Prachar Sabha, 2016</li>
+                    <li>🎯 Led academic team project <strong>Earthing System Installation</strong> with successful seminar presentation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2>Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>⚡ Technical Skills</h3>
+                    <ul>
+                        <li>Power Electronics</li>
+                        <li>Power Systems</li>
+                        <li>MATLAB Simulation</li>
+                        <li>C Programming</li>
+                        <li>HTML & CSS</li>
+                        <li>MS Office Suite</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🛠️ Tools & Software</h3>
+                    <ul>
+                        <li>GitHub Version Control</li>
+                        <li>VS Code</li>
+                        <li>SCADA Systems</li>
+                        <li>MATLAB/Simulink</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🤝 Professional Skills</h3>
+                    <ul>
+                        <li>Leadership</li>
+                        <li>Team Collaboration</li>
+                        <li>Time Management</li>
+                        <li>Project Management</li>
+                        <li>Technical Communication</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🌐 Languages</h3>
+                    <ul>
+                        <li>Urdu (Native)</li>
+                        <li>Telugu (Fluent)</li>
+                        <li>English (Professional)</li>
+                        <li>Hindi (Fluent)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2>Educational Background</h2>
+            <div class="education-item">
+                <h3>B.Tech in Electrical & Electronics Engineering</h3>
+                <p class="institution">Sri Venkateswara College of Engineering, Tirupati, AP</p>
+                <p>Sept 2023 – Present</p>
+                <p class="grade">CGPA: 8.87</p>
+            </div>
+            <div class="education-item">
+                <h3>Diploma in Electrical & Electronics Engineering</h3>
+                <p class="institution">Govt. Polytechnic College, Proddutur, AP</p>
+                <p>Jul 2020 – Apr 2023</p>
+                <p class="grade">Percentage: 77.56%</p>
+            </div>
+            <div class="education-item">
+                <h3>Industrial Training</h3>
+                <p class="institution">Kyungshin Industrial Motherson Pvt. Ltd</p>
+                <p>Jul 2022 – Jan 2023</p>
+                <p style="color: #666; margin-top: 10px;">Gained hands-on experience in electrical wiring, system assembly, and troubleshooting</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shaik Mulla Baba Fakruddin</h3>
+                    <p>Electrical & Electronics Engineering student passionate about power systems, renewable energy, and innovative solutions for sustainable technology.</p>
+                    <p style="margin-top: 15px; color: #64b5f6; font-weight: 600;">Open to opportunities and collaborations!</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>📬 Get In Touch</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <span>📧</span>
+                            <a href="mailto:smbabafakruddin@gmail.com">smbabafakruddin@gmail.com</a>
+                        </li>
+                        <li>
+                            <span>📱</span>
+                            <a href="tel:+918142545400">+91 8142545400</a>
+                        </li>
+                        <li>
+                            <span>📍</span>
+                            Guntakal, Andhra Pradesh, 515801
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>🌐 Connect With Me</h3>
+                    <p>Let's connect and explore opportunities together. Follow me on social media!</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" title="LinkedIn">💼</a>
+                        <a href="#" target="_blank" title="GitHub">💻</a>
+                        <a href="mailto:smbabafakruddin@gmail.com" title="Email">📧</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Shaik Mulla Baba Fakruddin | Crafted with ⚡ and passion for innovation</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
